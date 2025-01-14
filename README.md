@@ -1,4 +1,4 @@
-# Concurrency in Go With Channels: An Unoptimized vs. Optimized Example
+# Optimizing Concurrency in Go: From Naive Goroutines to Lean Worker Pools
 
 Run Benchmark using
 ```$ go test -bench=. -benchmem```
