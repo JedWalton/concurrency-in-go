@@ -7,11 +7,14 @@ import (
 )
 
 // Number of workers
-const workerCount = 10
+//const workerCount = 10
 
 func main() {
 	var memStats runtime.MemStats
 	runtime.ReadMemStats(&memStats)
+
+	// Ideally allocate the available number of CPUs for the worker count
+	workerCount := runtime.NumCPU()
 
 	dataCh := make(chan int)
 	var wg sync.WaitGroup
